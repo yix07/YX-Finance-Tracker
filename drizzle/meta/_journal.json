@@ -1,0 +1,20 @@
+{
+  "version": "5",
+  "dialect": "pg",
+  "entries": [
+    {
+      "idx": 0,
+      "version": "5",
+      "when": 1721180332466,
+      "tag": "0000_nasty_iron_man",
+      "breakpoints": true
+    },
+    {
+      "idx": 1,
+      "version": "5",
+      "when": 1721182123701,
+      "tag": "0001_pink_the_hunter",
+      "breakpoints": true
+    }
+  ]
+}
