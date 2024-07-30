@@ -10,3 +10,11 @@ export const accounts = pgTable("accounts", {
 
 export const insertAccountSchema = createInsertSchema(accounts);
 
+export const categories = pgTable("categories", {
+    id: text("id").primaryKey(),
+    name: text("name").notNull(),
+    userId: text("user_id").notNull(),
+    plaidId: text("plaid_id"),
+});
+
+export const insertCategorySchema = createInsertSchema(categories);

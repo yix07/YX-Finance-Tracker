@@ -15,6 +15,13 @@
       "when": 1721182123701,
       "tag": "0001_pink_the_hunter",
       "breakpoints": true
+    },
+    {
+      "idx": 2,
+      "version": "5",
+      "when": 1722369812443,
+      "tag": "0002_sloppy_synch",
+      "breakpoints": true
     }
   ]
 }
