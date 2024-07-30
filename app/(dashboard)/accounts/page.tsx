@@ -12,7 +12,7 @@ import { useGetAccounts } from "@/features/accounts/api/use-get-accounts";
 import { useBulkDeleteAccount } from "@/features/accounts/api/use-bulk-delete";
 import { Loader2, Plus } from "lucide-react";
 
-import { columns } from "./column";
+import { columns } from "./columns";
 import { DataTable } from "@/components/data-table";
 import { Skeleton } from "@/components/ui/skeleton";
 
