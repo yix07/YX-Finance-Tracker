@@ -39,7 +39,9 @@ export function fillMissingDays(
   startDate: Date,
   endDate: Date
 ) {
-  if (activeDays.length === 0) return [];
+  if (activeDays.length === 0) {
+    return [];
+  }
 
   const allDays = eachDayOfInterval({
     start: startDate,
@@ -49,7 +51,9 @@ export function fillMissingDays(
   const transactionsByDay = allDays.map((day) => {
     const found = activeDays.find((d) => isSameDay(d.date, day));
 
-    if (found) return found;
+    if (found) { 
+      return found;
+    }
     else {
       return {
         date: day,
