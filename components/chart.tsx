@@ -78,7 +78,7 @@ import {
             <div className="flex h-[350px] w-full flex-col items-center justify-center gap-y-4">
               <FileSearch className="size-6 text-muted-foreground" />
               <p className="text-sm text-muted-foreground">
-                No data for this period.
+                No data for this period
               </p>
             </div>
           ) : (

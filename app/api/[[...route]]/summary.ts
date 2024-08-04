@@ -9,7 +9,8 @@ import { db } from "@/db/drizzle";
 import { accounts, categories, transactions } from "@/db/schema";
 import { calculatePercentageChange, fillMissingDays } from "@/lib/utils";
 
-const app = new Hono().get(
+const app = new Hono()
+.get(
   "/",
   clerkMiddleware(),
   zValidator(
@@ -43,7 +44,7 @@ const app = new Hono().get(
     async function fetchFinancialData(
       userId: string,
       startDate: Date,
-      endDate: Date
+      endDate: Date,
     ) {
       return await db
         .select({
@@ -68,7 +69,7 @@ const app = new Hono().get(
     const [currentPeriod] = await fetchFinancialData(
       auth.userId,
       startDate,
-      endDate
+      endDate,
     );
     const [lastPeriod] = await fetchFinancialData(
       auth.userId,
@@ -105,7 +106,7 @@ const app = new Hono().get(
           eq(accounts.userId, auth.userId),
           lt(transactions.amount, 0),
           gte(transactions.date, startDate),
-          lte(transactions.date, endDate)
+          lte(transactions.date, endDate),
         )
       )
       .groupBy(categories.name)
@@ -118,8 +119,9 @@ const app = new Hono().get(
 
     const finalCategories = topCategories;
 
-    if (otherCategories.length > 0)
+    if (otherCategories.length > 0) {
       finalCategories.push({ name: "Other", value: otherSum });
+    }
 
     const activeDays = await db
       .select({

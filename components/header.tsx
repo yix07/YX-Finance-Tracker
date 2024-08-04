@@ -3,6 +3,7 @@ import { HeaderLogo } from "./header-logo"
 import { Navigation } from "./navigation"
 import { Loader2 } from "lucide-react"
 import { Welcome } from "./welcome"
+import { Filters } from "./filters"
 
 export const Header = () => {
     return (
@@ -20,9 +21,8 @@ export const Header = () => {
                         <Loader2 className="size-8 animate-spin text-slate-400"></Loader2>
                     </ClerkLoading>
                 </div>
-                <Welcome>
-                    
-                </Welcome>
+                <Welcome />
+                <Filters />
             </div>
         </header>
     )
