@@ -1,6 +1,6 @@
 # YX Finance
 
-![Personal Finance Tracker Dashboard](/Users/yee0730/Desktop/finance-tracker/dashboard-ss.png)
+![Personal Finance Tracker Dashboard](finance-tracker/dashboard-ss.png)
 
 ## Overview
 
